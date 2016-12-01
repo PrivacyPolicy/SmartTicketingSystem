@@ -1,0 +1,21 @@
+nav {
+    background-color: #3c3c3c;
+}
+nav.links{
+    height:45px;
+    background-color: #868686;
+}
+div.col{
+    background-color: #3cb878;
+    border-style: solid;
+    border-color: #868686;
+    border-width: 5px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+table{
+    background-color:white;
+}
+body{
+    background-color: #dbdbdb;
+}
