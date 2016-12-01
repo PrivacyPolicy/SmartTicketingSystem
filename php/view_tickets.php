@@ -15,13 +15,14 @@
     <body>
 
         <nav>
+            <img src="../img/logo.png">
         </nav>
         <nav class="links">
 
         </nav>
 
         <main><div class="row">
-                <div class="col s10 offset-s1">
+                <div class="col s10 offset-s1 main">
                     <section id=ticketsTable>
                         <table class="striped">
                             <thead>
@@ -69,24 +70,30 @@
                         </table>
                     </section>
 
-                    <section id=ticketView>
-                        <header>
+                    <div class="row viewHead">
+                        <div class="col s3">
                             <div id=viewTicketID>
-                                Ticket #<span class=data></span>
+                                <h5>Ticket # <span class=data></span></h5>
                             </div>
-                            <div id=viewTicketTitle></div>
-                            <div id=viewTicketClient></div>
-                        </header>
-                        <div id=viewTicketActions>
-                            <div id=viewTicketReply>Reply</div>
-                            <div id=viewTicketAssign>Assign</div>
-                            <div id=viewTicketAccept>Accept</div>
-                            <div id=viewTicketClose>Close</div>
                         </div>
-                        <div id=viewTicketBodyMessages>
+                        <div class="col s6">
+                            <h5><div id=viewTicketTitle></div></h5>
+                        </div>
+                        <div class="col s3">
+                            <h5><div id=viewTicketClient style="text-align:right;"></div></h5>
+                        </div>
+                    </div>
+                    
+                       
+                        <div id=viewTicketActions class="row viewNav">
+                            <div id=viewTicketReply class="col s3">Reply</div>
+                            <div id=viewTicketAssign class="col s3">Assign</div>
+                            <div id=viewTicketAccept class="col s3">Accept</div>
+                            <div id=viewTicketClose class="col s3">Close</div>
+                        </div>
+                        <div id=viewTicketBodyMessages class="description">
                             Messages will appear here.
                         </div></div>
-                </section>
             </div>
         </main>
     </body>

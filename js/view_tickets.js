@@ -22,8 +22,8 @@ $(function() {
                         var ticketBody = data[5];
                         
                         // apply them to the document
-                        $("#viewTicketID > .data").text(ticketID);
-                        $("#viewTicketTitle").text(ticketTitle);
+                        $("#viewTicketID  .data").text(ticketID);
+                        $("#viewTicketTitle").text('“'+ticketTitle+'”');
                         $("#viewTicketClient").text(ticketClient);
                         $("#viewTicketBodyMessages").html(ticketBody);
 
