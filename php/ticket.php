@@ -7,16 +7,20 @@ if ($id == 0) {
     die ("Error loading ticket data: id not found.");
 }
 
-echo "You got that ticket yo<br><br>";
+$query = "SELECT * FROM tickets WHERE id=$id;";
+$array = query($query);
 
-$json = query("SELECT ticket_id, department_id, client_id, title, description, assignee_id, open_status, category, priority FROM tickets WHERE ticket_id=$id;");
-
-if ($json) {
-    echo $json["title"] . "\n";
-    echo $json["description"] . "\n";
-    echo $json["open_status"] . "\n";
-    echo $json["category"] . "\n";
-    echo $json["assignee_id"] . "\n";
+if ($array !== FALSE && count($array) > 0) {
+    foreach ($array as $ticket) {
+        echo $ticket[0] . "<br>";
+        echo $ticket[1] . "<br>";
+        echo $ticket[2] . "<br>";
+        echo $ticket[3] . "<br>";
+        echo $ticket[4] . "<br>";
+        echo $ticket[5] . "<br>";
+    }
+} else {
+    die("Error loading ticket data: is there anything in the database?");
 }
 
 ?>
