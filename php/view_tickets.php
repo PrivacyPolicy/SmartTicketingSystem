@@ -27,7 +27,7 @@
                         <table class="striped">
                             <thead>
                                 <tr>
-                                    <th>Ticket #</th>
+                                    <th>Ticket&nbsp;#</th>
                                     <th>Subject</th>
                                     <th>Client</th>
                                     <th>Priority</th>
