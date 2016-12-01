@@ -14,4 +14,5 @@ function query($value) {
     return ($rows);
     //return ('{"recordsTotal":' . (string) $count . ',"data":' . str_replace("}", "]", str_replace("{", "[", json_encode($rows))) . "}");
 }
+
 ?>
