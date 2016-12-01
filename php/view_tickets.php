@@ -61,6 +61,7 @@ if (empty($array)) {
                         </tr>";
     }
 }
+echo "\n";
 ?>
                     </tbody>
                 </table>
