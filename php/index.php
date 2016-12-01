@@ -59,8 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
                         <form id=ticketForm method=post action=index.php>
                             <input name=fName placeholder="First Name"
+                                   class=name
                                    value="<?php echo $fName ?>">
                             <input name=lName placeholder="Last Name"
+                                   class=name
                                    value="<?php echo $lName ?>">
                             <input name=email placeholder="Email"
                                    value="<?php echo $email ?>">
