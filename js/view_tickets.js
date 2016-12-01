@@ -6,7 +6,9 @@ $(function() {
 
     function addTicketClickListeners() {
         $("tr.ticket").click(function(event) {
-            alert(event.currentTarget.id + "\n DO AJAX CALL");
+            if (event.currentTarget.id != "-1") {
+                alert(event.currentTarget.id + "\n DO AJAX CALL");
+            }
             
         });
     }

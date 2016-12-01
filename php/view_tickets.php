@@ -7,8 +7,8 @@
         
         <link rel=stylesheet href=../css/materialize.min.css>
         
-        <script src=../js/materialize.min.js></script>
         <script src=../js/jquery.min.js></script>
+        <script src=../js/materialize.min.js></script>
         <script src=../js/view_tickets.js></script>
     </head>
     <body>
@@ -34,7 +34,6 @@
 <?php
 
 $array = query("SELECT * FROM tickets");
-print_r ($array);
 if (empty($array)) {
     echo "
                         <tr id=-1 class=\"ticket noresults\">
