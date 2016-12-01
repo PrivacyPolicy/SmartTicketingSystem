@@ -42,21 +42,21 @@ if (empty($array)) {
 } else {
     foreach ($array as $ticket) {
         echo "
-                        <tr id={$ticket['id']} class=ticket>
+                        <tr id={$ticket[0]} class=ticket>
                             <td class=\"ticketNum\">
-                                
+                                {$ticket[0]}
                             </td>
                             <td class=\"subject\">
-                                
+                                {$ticket[1]}
                             </td>
                             <td class=\"client\">
-                                
+                                {$ticket[2]}
                             </td>
                             <td class=\"priority\">
-                                
+                                {$ticket[4]}
                             </td>
                             <td class=\"assignee\">
-                                
+                                {$ticket[3]}
                             </td>
                         </tr>";
     }
