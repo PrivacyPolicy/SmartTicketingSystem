@@ -33,6 +33,13 @@ div.description{
 #viewTicketClient{
     text-align:right;
 }
+#textAreaBorder {
+    background: white;
+    padding: 1rem;
+}
+#textAreaBorder > textarea {
+    margin-bottom: 0;
+}
 table{
     background-color:white;
     margin-bottom: 50px;

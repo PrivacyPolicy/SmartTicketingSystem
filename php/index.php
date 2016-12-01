@@ -20,7 +20,7 @@
 
         <main>
             <div class="row">
-                <div class="col s10 offset-s1">
+                <div class="col s10 offset-s1 main">
                     <section id=ticketsTable>
                         <h4>Submit a Ticket</h4>
                         <h6>
@@ -36,10 +36,17 @@
                             <input name=subject placeholder="Subject">
                             <input name=email placeholder="Email">
                             <input name=subject placeholder="Subject">
-                            <textarea name=body></textarea>
-                            <label for=file
-                                   class="waves-effect, waves-light btn">
-                                Attach a file
+                            <div id=textAreaBorder>
+                                <textarea name=body id=body
+                                          class=materialize-textarea
+                                          ></textarea>
+                            </div>
+                            <br><br>
+                            <label for=file>
+                                <a id=fileLink
+                                   class="waves-effect waves-light btn">
+                                    Attach a file
+                                </a>
                             </label>
                             <input type=file name=fileUpload id=file>
                             <a id=formSubmit
@@ -48,6 +55,7 @@
                                 Submit
                             </a>
                         </form>
+                        <br>
                     </section>
                 </div>
             </div>
