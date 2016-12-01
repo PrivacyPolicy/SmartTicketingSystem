@@ -33,8 +33,9 @@
                     <tbody>
 <?php
 
-$json = query("");
-foreach ($json as $ticket) {
+$json = query("SELECT * FROM tickets");
+echo $json;
+foreach ($json["data"] as $ticket) {
     echo "
                         <tr id={$ticket['id']} class=ticket>
                             <td class=\"ticketNum\">
