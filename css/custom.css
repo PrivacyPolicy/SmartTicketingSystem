@@ -36,11 +36,23 @@ input.name{
 .btn:hover{
     background-color: #868686;
 }
+.ticket:hover {
+    cursor: pointer;
+}
+table.highlight>tbody>tr:hover {
+    background-color: #ddd;
+}
 #viewTicketTitle{
     text-align:center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 #viewTicketClient{
     text-align:right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 #textAreaBorder {
     background: white;
