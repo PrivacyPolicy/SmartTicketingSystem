@@ -27,6 +27,12 @@ div.description{
     padding:5px;
     margin-bottom: 50px;
 }
+.btn{
+    background-color:#000000;
+}
+.btn:hover{
+    background-color: #868686;
+}
 #viewTicketTitle{
     text-align:center;
 }
