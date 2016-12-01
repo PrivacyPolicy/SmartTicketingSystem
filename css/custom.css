@@ -63,6 +63,9 @@ table{
     margin-bottom: 50px;
     margin-top: 30px;
 }
+td.ticketNum{
+    padding-left: 2em;
+}
 body{
     background-color: #dbdbdb;
 }
