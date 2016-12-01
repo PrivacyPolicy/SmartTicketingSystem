@@ -27,6 +27,9 @@ div.description{
     padding:5px;
     margin-bottom: 50px;
 }
+input.name{
+    width: 49%;
+}
 .btn{
     background-color:#000000;
 }
