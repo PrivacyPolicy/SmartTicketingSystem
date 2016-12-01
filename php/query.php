@@ -11,7 +11,9 @@ function query($value) {
         $rows[] = $array;
         $count++;
     }
-    return ('{"recordsTotal":' . (string) $count . ',"data":' . str_replace("}", "]", str_replace("{", "[", json_encode($rows))) . "}");
+    echo json_encode($rows);
+    return json_encode($rows);
+    //return ('{"recordsTotal":' . (string) $count . ',"data":' . str_replace("}", "]", str_replace("{", "[", json_encode($rows))) . "}");
 }
-
+query("SELECT * FROM tickets");
 ?>
