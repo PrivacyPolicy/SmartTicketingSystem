@@ -46,12 +46,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             && $email !== "" && $details !== "") {
         $details = filter_var($details, FILTER_SANITIZE_STRING);
         $query = "insert into tickets(subject,user_id,asignee_id,priority,description) values('$subject','Caleb Riggs','$fName $lName',1,'$details');";
+        $message = "";
         if (query($query)) {
-            
+            $fName = $lName = $subject = $email = $details = "";
+            $message = "You ticket has been submitted succesfully!";
         } else {
-            echo $query;
-            echo "<script>$(function() { alert(\"Error with data.\"); });</script>";
+            $message = "Error submitting your ticket.";
         }
+        echo "<script>$(function() { alert(\"$message\"); });</script>";
     }
 }
 ?>
