@@ -6,6 +6,13 @@ function query($value) {
     $query = mysql_query($value);
     $rows = array();
     $count = 0;
+    if ($query === FALSE) {
+        echo("query returned false");
+        return FALSE;
+    }
+    if ($query === TRUE) {
+        return TRUE;
+    }
     while ($row = mysql_fetch_assoc($query)) {
         $array = array($row["id"], $row["subject"], $row["user_id"], $row["asignee_id"], $row["priority"], $row["description"]);
         $rows[] = $array;
@@ -14,5 +21,4 @@ function query($value) {
     return ($rows);
     //return ('{"recordsTotal":' . (string) $count . ',"data":' . str_replace("}", "]", str_replace("{", "[", json_encode($rows))) . "}");
 }
-
 ?>
