@@ -7,7 +7,6 @@ function query($value) {
     $rows = array();
     $count = 0;
     if ($query === FALSE) {
-        echo("query returned false");
         return FALSE;
     }
     if ($query === TRUE) {

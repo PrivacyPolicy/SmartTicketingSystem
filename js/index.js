@@ -6,7 +6,8 @@ $(function() {
 
     function addTicketClickListeners() {
         $("#formSubmit").click(function(event) {
-            $("#ticketForm").submit();
+            event.preventDefault();
+            $("#ticketForm").trigger("submit");
         });
     }
 });

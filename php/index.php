@@ -11,6 +11,7 @@
         <script src=../js/jquery.min.js></script>
         <script src=../js/materialize.min.js></script>
         <script src=../js/view_tickets.js></script>
+        <script src=../js/index.js></script>
     </head>
     <body><nav>
             <img src="../img/logo.png" height="35px">
@@ -31,16 +32,43 @@
                                 newticket@SmartTicket.com
                             </a> to submit a ticket.
                         </h6>
+<?php
+$fName = $lName = $subject = $email = $details = "";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $fName = (isset($_POST["fName"])) ? $_POST["fName"] : "";
+    $lName = (isset($_POST["lName"])) ? $_POST["lName"] : "";
+    $subject = (isset($_POST["subject"])) ? $_POST["subject"] : "";
+    $email = (isset($_POST["email"])) ? $_POST["email"] : "";
+    $details = (isset($_POST["details"])) ? $_POST["details"] : "";
+    
+    // if ALL are set
+    if ($fName !== "" && $lName !== "" && $subject !== ""
+            && $email !== "" && $details !== "") {
+        $details = filter_var($details, FILTER_SANITIZE_STRING);
+        $query = "insert into tickets(subject,user_id,asignee_id,priority,description) values('$subject','Caleb Riggs','$fName $lName',1,'$details');";
+        if (query($query)) {
+            
+        } else {
+            echo $query;
+            echo "<script>$(function() { alert(\"Error with data.\"); });</script>";
+        }
+    }
+}
+?>
                         <form id=ticketForm method=post action=index.php>
-                            <input name=fName placeholder="First Name">
-                            <input name=lName placeholder="Last Name">
-                            <input name=subject placeholder="Subject">
-                            <input name=email placeholder="Email">
-                            <input name=subject placeholder="Subject">
+                            <input name=fName placeholder="First Name"
+                                   value="<?php echo $fName ?>">
+                            <input name=lName placeholder="Last Name"
+                                   value="<?php echo $lName ?>">
+                            <input name=email placeholder="Email"
+                                   value="<?php echo $email ?>">
+                            <input name=subject placeholder="Subject"
+                                   value="<?php echo $subject ?>">
                             <div id=textAreaBorder>
-                                <textarea name=body id=body
+                                <textarea name=details id=details
                                           class=materialize-textarea
-                                          ></textarea>
+                                          ><?php echo $details;
+                                    ?></textarea>
                             </div>
                             <br><br>
                             <label for=file>
@@ -51,8 +79,7 @@
                             </label>
                             <input type=file name=fileUpload id=file>
                             <a id=formSubmit
-                               class="waves-effect waves-light btn"
-                               href="">
+                               class="waves-effect waves-light btn">
                                 Submit
                             </a>
                         </form>
