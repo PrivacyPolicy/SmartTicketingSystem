@@ -20,7 +20,8 @@
 
         </nav>
 
-        <main><div class="row">
+        <main>
+            <div class="row">
                 <div class="col s10 offset-s1">
                     <section id=ticketsTable>
                         <table class="striped">
@@ -85,8 +86,9 @@
                         </div>
                         <div id=viewTicketBodyMessages>
                             Messages will appear here.
-                        </div></div>
-                </section>
+                        </div>
+                    </section>
+                </div>
             </div>
         </main>
     </body>
