@@ -13,6 +13,7 @@
         <script src=../js/view_tickets.js></script>
     </head>
     <body><nav>
+            <img src="../img/logo.png" height="35px">
         </nav>
         <nav class="links">
 
