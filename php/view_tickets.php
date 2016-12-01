@@ -24,7 +24,7 @@
         <main><div class="row">
                 <div class="col s10 offset-s1 main">
                     <section id=ticketsTable>
-                        <table class="striped">
+                        <table class="striped highlight">
                             <thead>
                                 <tr>
                                     <th>Ticket&nbsp;#</th>
