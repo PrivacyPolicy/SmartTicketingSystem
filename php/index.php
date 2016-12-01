@@ -32,8 +32,8 @@
                             </a> to submit a ticket.
                         </h6>
                         <form id=ticketForm method=post action=index.php>
-                            <input name=fName placeholder="First Name">
-                            <input name=lName placeholder="Last Name">
+                            <input name=fName placeholder="First Name" class="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name=lName placeholder="Last Name" class="name">
                             <input name=subject placeholder="Subject">
                             <input name=email placeholder="Email">
                             <input name=subject placeholder="Subject">
