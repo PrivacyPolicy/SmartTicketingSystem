@@ -15,7 +15,7 @@
     <body>
 
         <nav>
-            <img src="../img/logo.png">
+            <img src="../img/logo.png" height="35px">
         </nav>
         <nav class="links">
 
