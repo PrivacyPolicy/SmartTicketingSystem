@@ -4,7 +4,7 @@ mysql_select_db("ticketing_test", $linkID) or die("Could not find database.");
 
 
 function query($value){
-$query = $value
+$query = $value;
 $rows = array();
 $count=0;
 while($row = mysql_fetch_assoc($query)) {
