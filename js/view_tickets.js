@@ -23,8 +23,8 @@ $(function() {
                         
                         // apply them to the document
                         $("#viewTicketID  .data").text(ticketID);
-                        $("#viewTicketTitle").text('“'+ticketTitle+'”');
-                        $("#viewTicketClient").text(ticketClient);
+                        $("#viewTicketTitle").html('“'+ticketTitle+'”');
+                        $("#viewTicketClient").html(ticketClient);
                         $("#viewTicketBodyMessages").html(ticketBody);
 
                     } else {

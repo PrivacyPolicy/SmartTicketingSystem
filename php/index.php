@@ -44,6 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // if ALL are set
     if ($fName !== "" && $lName !== "" && $subject !== ""
             && $email !== "" && $details !== "") {
+        $fName = filter_var($fName, FILTER_SANITIZE_STRING);
+        $lName = filter_var($lName, FILTER_SANITIZE_STRING);
+        $subject = filter_var($subject, FILTER_SANITIZE_STRING);
+        $email = filter_var($email, FILTER_SANITIZE_STRING);
         $details = filter_var($details, FILTER_SANITIZE_STRING);
         $query = "insert into tickets(subject,user_id,asignee_id,priority,description) values('$subject','Caleb Riggs','$fName $lName',1,'$details');";
         $message = "";
