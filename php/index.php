@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+                        <br>
                         <form id=ticketForm method=post action=index.php>
                             <input name=fName placeholder="First Name"
                                    class=name
