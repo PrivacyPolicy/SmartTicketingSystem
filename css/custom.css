@@ -40,6 +40,15 @@ div.description{
 #textAreaBorder > textarea {
     margin-bottom: 0;
 }
+#file {
+    display: none;
+}
+label[for=file] {
+    font-size: inherit;
+}
+#formSubmit {
+    float: right;
+}
 table{
     background-color:white;
     margin-bottom: 50px;
