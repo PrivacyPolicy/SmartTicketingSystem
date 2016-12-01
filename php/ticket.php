@@ -11,14 +11,7 @@ $query = "SELECT * FROM tickets WHERE id=$id;";
 $array = query($query);
 
 if ($array !== FALSE && count($array) > 0) {
-    foreach ($array as $ticket) {
-        echo $ticket[0] . "<br>";
-        echo $ticket[1] . "<br>";
-        echo $ticket[2] . "<br>";
-        echo $ticket[3] . "<br>";
-        echo $ticket[4] . "<br>";
-        echo $ticket[5] . "<br>";
-    }
+    echo json_encode($array[0]);
 } else {
     die("Error loading ticket data: is there anything in the database?");
 }
