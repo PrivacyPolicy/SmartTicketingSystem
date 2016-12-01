@@ -1,7 +1,7 @@
 <?php
 
 function query($value) {
-    $linkID = mysql_connect("localhost", "root", $file_get_contents("passwords.txt")) or die("Could not connect to host.");
+    $linkID = mysql_connect("localhost", "root", file_get_contents("passwords.txt")) or die("Could not connect to host.");
     mysql_select_db("ticketing_test", $linkID) or die("Could not find database.");
     $query = $value;
     $rows = array();
