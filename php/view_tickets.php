@@ -33,10 +33,16 @@
                     <tbody>
 <?php
 
-$json = query("SELECT * FROM tickets");
-print_r ($json);
-foreach ($json as $ticket) {
+$array = query("SELECT * FROM tickets");
+print_r ($array);
+if (empty($array)) {
     echo "
+                        <tr id=-1 class=\"ticket noresults\">
+                            <td>No tickets found</td>
+                        </tr>";
+} else {
+    foreach ($array as $ticket) {
+        echo "
                         <tr id={$ticket['id']} class=ticket>
                             <td class=\"ticketNum\">
                                 
@@ -54,6 +60,7 @@ foreach ($json as $ticket) {
                                 
                             </td>
                         </tr>";
+    }
 }
 ?>
                     </tbody>
